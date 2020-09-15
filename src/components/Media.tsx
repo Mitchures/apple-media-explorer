@@ -2,7 +2,7 @@ import React from 'react';
 import './Media.css';
 import { useStateValue } from 'context';
 
-const Media = () => {
+const Media: React.FC = () => {
   const [{ data }, dispatch] = useStateValue();
 
   return (

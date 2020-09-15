@@ -2,7 +2,7 @@ import React from 'react';
 import './Subheader.css';
 import { useStateValue } from 'context';
 
-const Subheader = () => {
+const Subheader: React.FC = () => {
   const [{ entity }] = useStateValue();
 
   return (

@@ -3,7 +3,7 @@ import './Sidebar.css';
 import { Button } from '@material-ui/core';
 import { useStateValue } from 'context';
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   const [{ data, selected }, dispatch] = useStateValue();
 
   return (
