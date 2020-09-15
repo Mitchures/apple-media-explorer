@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Search.css';
 import SearchIcon from '@material-ui/icons/Search';
-import { Entity } from 'types';
+import { IEntity } from 'types';
 import axios from 'config/axios';
 import { useStateValue } from 'context';
 
-const Search: React.FC<Entity> = ({ label, type }) => {
+const Search: React.FC<IEntity> = ({ label, type }) => {
   const [{ entity }, dispatch] = useStateValue();
   const [input, setInput] = useState<string>('');
 

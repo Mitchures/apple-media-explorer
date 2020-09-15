@@ -21,6 +21,9 @@
   top: 0;
   bottom: 0;
   font-size: 40px;
+  /* background-color: #1f1f1f; */
+  /* padding: 1.325rem; */
+  /* border-radius: 999px; */
 }
 
 .progress__ring > h1 {

@@ -1,4 +1,4 @@
-import { Entity } from 'types';
+import { IEntity } from 'types';
 
 export interface IData {
   resultCount: number;
@@ -6,7 +6,7 @@ export interface IData {
 }
 
 export type State = {
-  entity: Entity;
+  entity: IEntity;
   data: IData | null;
   selected: any;
 };
@@ -22,5 +22,5 @@ export type Action =
     }
   | {
       type: 'set_entity';
-      entity: Entity;
+      entity: IEntity;
     };

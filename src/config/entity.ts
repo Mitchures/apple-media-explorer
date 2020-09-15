@@ -1,6 +1,6 @@
-import { Entity } from "types";
+import { IEntity } from "types";
 
-export const entities: Entity[] = [
+export const entities: IEntity[] = [
   {
     label: 'Movies',
     type: 'movie',
