@@ -1,0 +1,17 @@
+.subheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2rem 1.875rem;
+}
+
+.subheader > h1 {
+  font-size: 46px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .subheader {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}

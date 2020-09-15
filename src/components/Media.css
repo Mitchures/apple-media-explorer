@@ -1,0 +1,59 @@
+.media {
+  flex: 0.75;
+  overflow-y: scroll;
+  padding: 2.625rem 2rem;
+}
+
+.media::-webkit-scrollbar { 
+  width: 0 !important 
+}
+
+.media__grid {
+  display: grid;
+  grid-row-gap: 1.25rem;
+  grid-column-gap: 1.25rem;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.media__gridItem {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.media__gridItem:hover {
+  transform: scale(1.05) translateZ(0px);
+}
+
+.media__gridItem > img {
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
+}
+
+.media__gridItemLabel {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  padding-top: 0.625rem;
+  max-width: 200px;
+}
+
+.media__gridItemLabelTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.media__gridItemLabelSubtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 0.325rem;
+  color:  #afafaf;
+}
+
+@media (prefers-color-scheme: dark) {
+}

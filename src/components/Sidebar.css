@@ -1,0 +1,75 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.25;
+  overflow-y: scroll;
+  padding-bottom: 1rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar::-webkit-scrollbar { 
+  width: 0 !important 
+}
+
+.sidebar__noResults {
+  padding: 0.875rem 1.1rem;
+}
+
+.sidebar__results {
+  display: flex;
+  flex-direction: column;
+  padding: 0.875rem;
+}
+
+.sidebar__results > button {
+  font-weight: 600;
+  display: block !important;
+  border: none !important;
+  text-align: left !important;
+  text-transform: capitalize !important;
+  margin: 0.125rem 0 !important;
+  min-height: 58px !important;
+}
+
+.sidebar__resultsButton--active {
+  color: white !important;
+  background-image: linear-gradient(to right, var(--apple-pink) 0%, var(--apple-mid-pink) 100%) !important;
+  box-shadow: 0 0 15px -5px var(--apple-mid-pink);
+}
+
+.sidebar__resultsButton--active .sidebar__resultsButtonLabelSubtitle {
+  color:  rgba(255, 255, 255, 0.65) !important;
+}
+
+.sidebar__resultsButtonLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__resultsButtonLabelTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar__resultsButtonLabelSubtitle {
+  color:  #909090;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidebar {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .sidebar__resultsButton {
+    color: white !important;
+  }
+
+  .sidebar__resultsButtonLabelSubtitle {
+    color: #afafaf;
+  }
+
+}
