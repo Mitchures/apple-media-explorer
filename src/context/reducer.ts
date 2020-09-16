@@ -3,6 +3,11 @@ import { State, Action } from './types';
 export const reducer = (state: State, action: Action): State => {
   console.log(state, action);
   switch (action.type) {
+    case 'set_genres':
+      return {
+        ...state,
+        genres: action.genres,
+      };
     case 'set_selection':
       return {
         ...state,

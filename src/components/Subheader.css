@@ -8,10 +8,37 @@
 
 .subheader > h1 {
   font-size: 46px;
+  flex: 0.25;
+}
+
+.subheader__actions {
+  flex: 0.75;
+  overflow: visible;
+  text-align: right;
+}
+
+.subheader__actions > button {
+  text-transform: capitalize;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 0.25rem 0.375rem;
+  border-radius: 999px;
+}
+
+.subheader__button--active {
+  border-color: var(--apple-pink) !important;
+  color: white !important;
+  background-image: linear-gradient(to right, var(--apple-pink) 0%, var(--apple-alt-pink) 100%) !important;
+  box-shadow: 0 0 15px -5px var(--apple-pink);
 }
 
 @media (prefers-color-scheme: dark) {
   .subheader {
     border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .subheader__actions > button {
+    color: white;
+    border-color:rgba(255, 255, 255, 0.15);
   }
 }

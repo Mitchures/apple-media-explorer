@@ -1,88 +1,70 @@
 .favorites {
-  display: flex;
   flex: 0.75;
   overflow-y: scroll;
 }
 
-.progress__ring {
-  margin: 2rem;
-  position: relative;
-  height: 140px;
-  width: 140px;
+.favorites__header {
+  padding: 2rem 2rem 0;
 }
 
-.progress__ring > .MuiSvgIcon-root {
-  z-index: 2;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: block;
-  top: 0;
-  bottom: 0;
-  font-size: 40px;
-  /* background-color: #1f1f1f; */
-  /* padding: 1.325rem; */
-  /* border-radius: 999px; */
+.favorites__body::-webkit-scrollbar { 
+  width: 0 !important 
 }
 
-.progress__ring > h1 {
-  z-index: 2;
-  font-size: 32px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+.favorites__body {
   display: flex;
-  align-items: center; /** Y-axis align **/
-  justify-content: center; /** X-axis align **/
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
-.chart {
-  z-index: 1;
-  -webkit-transform: rotate(-269.9deg);
-  transform: rotate(-270deg);
+.favorites__body > .favorites__item:first-child {
+  padding-left: 2rem;
 }
 
-.foo {
-  stroke-dasharray: 310;
-  stroke-dashoffset: 150;
-  /* animation: dash 1.5s linear forwards; */
+.favorites__body > .favorites__item:last-child {
+  padding-right: 2rem;
 }
 
-.foo2 {
-  stroke-dasharray: 310;
-  stroke-dashoffset: 0;
-  /* animation: dash 1.5s linear forwards; */
+.favorites__item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 2rem 1.25rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .gray {
-    stroke: #1f1f1f;
-  }
+.favorites__item:hover {
+  transform: scale(1.05) translateZ(0px);
 }
 
-@keyframes show100 {
-  from {
-    stroke-dashoffset: 537;
-  }
-
-  to {
-    stroke-dashoffset: 0;
-  }
+.favorites__item > img {
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes rotmovement {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.favorites__itemLabel {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  padding-top: 0.625rem;
+  max-width: 350px;
 }
 
-@keyframes dash {
-  to {
-    stroke-dashoffset: 150;
-  }
+.favorites__body:last-child .favorites__itemLabel {
+  max-width: 200px;
+}
+
+.favorites__itemLabelTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favorites__itemLabelSubtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 0.325rem;
+  color:  #afafaf;
 }

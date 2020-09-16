@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './MediaDetails.css';
-import { Button } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
 import { Image, OpenInNew } from '@material-ui/icons';
 import TextTruncate from 'react-text-truncate';
 import { useStateValue } from 'context';
@@ -51,15 +51,14 @@ const MediaDetails: React.FC = () => {
           <div className="mediaDetails__rightHeader">
             <h1>{trackName ? trackName : collectionName}</h1>
             <div className="mediaDetails__actions">
-              <Button variant="outlined" onClick={downloadArtwork}>
+              <IconButton onClick={downloadArtwork}>
                 <Image />
-              </Button>
-              <Button
-                variant="outlined"
+              </IconButton>
+              <IconButton
                 href={trackViewUrl ? trackViewUrl : collectionViewUrl}
               >
                 <OpenInNew />
-              </Button>
+              </IconButton>
             </div>
           </div>
           <h3>{artistName}</h3>

@@ -3,8 +3,8 @@ import './Header.css';
 import LogoBlack from 'images/apple-black.svg';
 import LogoWhite from 'images/apple-white.svg';
 import { Button } from '@material-ui/core';
-import { entities } from 'config/entity';
-import { useMedia } from 'utils/useHooks';
+import { entities } from 'config';
+import { useMedia } from 'utils';
 import Search from './Search';
 import { useStateValue } from 'context';
 
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   return (
     <div className="header">
       <div className="header__left">
-        <img src={darkMode ? LogoWhite : LogoBlack} alt="Apple Artwork" />
+        <img src={darkMode ? LogoWhite : LogoBlack} alt="Apple" />
         <h1>
           Media <span>Explorer</span>
         </h1>

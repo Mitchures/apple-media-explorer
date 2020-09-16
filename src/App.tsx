@@ -32,16 +32,18 @@ const App: React.FC = () => {
       </div>
       {selected && (
         <div
-          className={`app__bg${bgColorLoaded && bgBlackLoaded && '--loaded'}`}
+          className={`app__bg${
+            bgColorLoaded && bgBlackLoaded ? '--loaded' : ''
+          }`}
         >
           <img
-            className={`app__bgColor${bgColorLoaded && '--loaded'}`}
+            className={`app__bgColor${bgColorLoaded ? '--loaded' : ''}`}
             onLoad={() => setBgColorLoaded(true)}
             alt={selected?.trackName}
             src={selected?.artworkUrl100}
           />
           <img
-            className={`app__bgBlack${bgBlackLoaded && '--loaded'}`}
+            className={`app__bgBlack${bgBlackLoaded ? '--loaded' : ''}`}
             onLoad={() => setBgBlackLoaded(true)}
             alt={selected?.trackName}
             src={selected?.artworkUrl100}

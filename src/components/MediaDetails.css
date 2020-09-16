@@ -7,7 +7,7 @@
 
 .mediaDetails__container {
   display: flex;
-  padding: 1.875rem;
+  padding: 2rem;
   z-index: 10;
   height: 100%;
 }
@@ -68,6 +68,7 @@
 .mediaDetails__actions > button {
   color: var(--apple-pink);
   border: none;
+  margin: 0 0.625rem;
   transition: all 0.2s ease;
 }
 
@@ -78,11 +79,11 @@
 }
 
 .mediaDetails__actions > button:hover {
-  color: var(--apple-pink);
+  /* color: var(--apple-pink); */
 }
 
 .mediaDetails__actions > a:hover {
-  color: var(--apple-pink);
+  /* color: var(--apple-pink); */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -100,32 +101,5 @@
 
   .mediaDetails__actions > a {
     color: white;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

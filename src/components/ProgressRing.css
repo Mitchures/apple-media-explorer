@@ -1,0 +1,71 @@
+.progressRing {
+  margin: 2rem;
+  position: relative;
+}
+
+.progressRing > .MuiSvgIcon-root {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  top: 0;
+  bottom: 0;
+  font-size: 40px;
+}
+
+.progressRing > h1 {
+  z-index: 2;
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /** Y-axis align **/
+  justify-content: center; /** X-axis align **/
+}
+
+.progressRing__svg {
+  z-index: 1;
+  -webkit-transform: rotate(-269.9deg);
+  transform: rotate(-270deg);
+}
+
+.progressRing__svgTopLayer {
+  stroke-dasharray: 310;
+  stroke-dashoffset: 150;
+  /* animation: dash 1.5s linear forwards; */
+}
+
+@media (prefers-color-scheme: dark) {
+  .progressRing__svgBottomLayer {
+    stroke: #1f1f1f;
+  }
+}
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotmovement {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 150;
+  }
+}

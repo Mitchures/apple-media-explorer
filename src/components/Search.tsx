@@ -21,6 +21,15 @@ const Search: React.FC<IEntity> = ({ label, type }) => {
       .then((response) => {
         console.log(response);
         dispatch({ type: 'set_data', data: response.data });
+
+        let genres: any[] = [];
+        // eslint-disable-next-line
+        response.data.results.map(({ primaryGenreName }: any) => {
+          if (!genres.includes(primaryGenreName)) {
+            genres = [...genres, primaryGenreName];
+          }
+        });
+        dispatch({ type: 'set_genres', genres: genres });
       });
   };
 
