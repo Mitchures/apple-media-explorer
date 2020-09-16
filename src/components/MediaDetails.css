@@ -41,10 +41,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.25rem;
 }
 
 .mediaDetails__right > h3 {
+  color: #909090;
+  margin-bottom: 0.625rem;
+}
+
+.mediaDetails__right > h4 {
   color: #909090;
   margin-bottom: 0.625rem;
 }
@@ -78,16 +83,12 @@
   transition: all 0.2s ease;
 }
 
-.mediaDetails__actions > button:hover {
-  /* color: var(--apple-pink); */
-}
-
-.mediaDetails__actions > a:hover {
-  /* color: var(--apple-pink); */
-}
-
 @media (prefers-color-scheme: dark) {
   .mediaDetails__right > h3 {
+    color: #afafaf;
+  }
+
+  .mediaDetails__right > h4 {
     color: #afafaf;
   }
 

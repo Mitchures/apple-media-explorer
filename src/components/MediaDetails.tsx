@@ -16,6 +16,10 @@ const MediaDetails: React.FC = () => {
     collectionViewUrl,
     artistName,
     longDescription,
+    releaseDate,
+    genres,
+    contentAdvisoryRating,
+    primaryGenreName,
     description,
   } = selected;
 
@@ -62,6 +66,15 @@ const MediaDetails: React.FC = () => {
             </div>
           </div>
           <h3>{artistName}</h3>
+          <h4>
+            {primaryGenreName
+              ? `${primaryGenreName} • `
+              : genres
+              ? `${genres[0]} • `
+              : ''}
+            {new Date(releaseDate).getFullYear()}
+            {contentAdvisoryRating ? ` • ${contentAdvisoryRating}` : ''}
+          </h4>
           {/<\/?[a-z][\s\S]*>/i.test(description) && !longDescription ? (
             <p
               className="mediaDetails__htmlDescription"

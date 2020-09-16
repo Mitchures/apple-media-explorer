@@ -1,31 +1,31 @@
-.favorites {
+.features {
   flex: 0.75;
   overflow-y: scroll;
 }
 
-.favorites__header {
+.features__header {
   padding: 2rem 2rem 0;
 }
 
-.favorites__body::-webkit-scrollbar { 
+.features__body::-webkit-scrollbar { 
   width: 0 !important 
 }
 
-.favorites__body {
+.features__body {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-.favorites__body > .favorites__item:first-child {
+.features__body > .features__item:first-child {
   padding-left: 2rem;
 }
 
-.favorites__body > .favorites__item:last-child {
+.features__body > .features__item:last-child {
   padding-right: 2rem;
 }
 
-.favorites__item {
+.features__item {
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -33,17 +33,17 @@
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
-.favorites__item:hover {
+.features__item:hover {
   transform: scale(1.05) translateZ(0px);
 }
 
-.favorites__item > img {
+.features__item > img {
   object-fit: contain;
   border-radius: 6px;
   box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.25);
 }
 
-.favorites__itemLabel {
+.features__itemLabel {
   display: flex;
   flex-direction: column;
   font-weight: 600;
@@ -51,17 +51,17 @@
   max-width: 350px;
 }
 
-.favorites__body:last-child .favorites__itemLabel {
+.features__body:last-child .features__itemLabel {
   max-width: 200px;
 }
 
-.favorites__itemLabelTitle {
+.features__itemLabelTitle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.favorites__itemLabelSubtitle {
+.features__itemLabelSubtitle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

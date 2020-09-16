@@ -5,7 +5,7 @@ import Sidebar from 'components/Sidebar';
 import Subheader from 'components/Subheader';
 import Media from 'components/Media';
 import MediaDetails from 'components/MediaDetails';
-import Favorites from 'components/Favorites';
+import Features from 'components/Features';
 import { useStateValue } from 'context';
 
 const App: React.FC = () => {
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <Subheader />
       <div className="app__body">
         <Sidebar />
-        {!selected && !data && <Favorites />}
+        {!selected && !data && <Features />}
         {!selected && data && <Media />}
         {selected && <MediaDetails />}
       </div>
