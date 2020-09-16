@@ -17,16 +17,25 @@ const Search: React.FC<IEntity> = ({ label, type }) => {
     event.preventDefault();
     dispatch({ type: 'set_selection', selected: null });
     await axios
-      .get(`/search?term=${input}&entity=${type}&limit=25`)
+      .get(`/search?term=${input}&entity=${type}&limit=35`)
       .then((response) => {
         console.log(response);
         dispatch({ type: 'set_data', data: response.data });
 
         let genres: any[] = [];
         // eslint-disable-next-line
-        response.data.results.map(({ primaryGenreName }: any) => {
-          if (!genres.includes(primaryGenreName)) {
-            genres = [...genres, primaryGenreName];
+        response.data.results.map((item: any) => {
+          if (item.primaryGenreName) {
+            if (!genres.includes(item.primaryGenreName)) {
+              genres = [...genres, item.primaryGenreName];
+            }
+          } else if (item.genres) {
+            // eslint-disable-next-line
+            item.genres.map((g: string) => {
+              if (!genres.includes(g)) {
+                genres = [...genres, g];
+              }
+            });
           }
         });
         dispatch({ type: 'set_genres', genres: genres });
