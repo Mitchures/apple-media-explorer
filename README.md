@@ -2,6 +2,9 @@
 ---
 Apple Media Explorer is an Apple Music UI inspired iTunes media finder built using Typescript, React, React Context API, and Apple's iTunes Search API. Made with love by **Mitchell Hollander**.
 
+## Features
+User's are able to search through the entire catalog of iTunes to view media details and download cover artwork.
+
 ![og](https://github.com/Mitchures/apple-media-explorer/blob/master/src/images/ame-screen.png "Apple Media Explorer Screen")
 
 ## API
