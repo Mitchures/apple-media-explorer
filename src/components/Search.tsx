@@ -17,7 +17,7 @@ const Search: React.FC<IEntity> = ({ label, type }) => {
     event.preventDefault();
     dispatch({ type: 'set_selection', selected: null });
     await axios
-      .get(`/search?term=${input}&country=us&entity=${type}&limit=35`)
+      .get(`/search?term=${input}&entity=${type}&limit=25`)
       .then((response) => {
         console.log(response);
         dispatch({ type: 'set_data', data: response.data });
