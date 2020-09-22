@@ -6,6 +6,7 @@ import Subheader from 'components/Subheader';
 import Media from 'components/Media';
 import MediaDetails from 'components/MediaDetails';
 import Features from 'components/Features';
+import { WithSplashScreen } from 'components/WithSplashScreen';
 import { useStateValue } from 'context';
 
 const App: React.FC = () => {
@@ -54,4 +55,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default WithSplashScreen(App);

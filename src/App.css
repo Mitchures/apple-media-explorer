@@ -11,6 +11,7 @@
   color: #333333;
   background-color: rgba(255, 255, 255, 0.75);
   z-index: 2;
+  animation: fadeIn .5s ease-in;
 }
 
 .app__body {

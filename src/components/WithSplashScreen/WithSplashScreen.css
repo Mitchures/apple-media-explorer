@@ -1,0 +1,40 @@
+.splashScreen {
+  display: grid;
+  place-items: center;
+  color: white;
+  height: 100vh;
+  background-image: linear-gradient(
+    120deg,
+    var(--apple-pink) 0%,
+    var(--apple-purple) 100%
+  );
+}
+
+.splashScreen--loaded {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.splashScreen__content {
+  animation: fadeIn ease .5s;
+  height: 58px;
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.splashScreen__content > h1 {
+  padding-left: 0.45rem;
+  font-size: 42px;
+}
+
+.splashScreen__content > h1 > span {
+  font-weight: 300;
+}
+
+.splashScreen__content > img {
+  object-fit: contain;
+  height: 36px;
+}
