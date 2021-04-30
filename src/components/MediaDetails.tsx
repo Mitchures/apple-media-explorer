@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './MediaDetails.css';
 import { IconButton } from '@material-ui/core';
-import { Image, OpenInNew } from '@material-ui/icons';
+import { GetApp, OpenInNew } from '@material-ui/icons';
 import TextTruncate from 'react-text-truncate';
 import { useStateValue } from 'context';
 
@@ -55,11 +55,12 @@ const MediaDetails: React.FC = () => {
           <div className="mediaDetails__rightHeader">
             <h1>{trackName ? trackName : collectionName}</h1>
             <div className="mediaDetails__actions">
-              <IconButton onClick={downloadArtwork}>
-                <Image />
+              <IconButton onClick={downloadArtwork} title="Download Artwork">
+                <GetApp />
               </IconButton>
               <IconButton
                 href={trackViewUrl ? trackViewUrl : collectionViewUrl}
+                title="Open in iTunes"
               >
                 <OpenInNew />
               </IconButton>
@@ -67,11 +68,7 @@ const MediaDetails: React.FC = () => {
           </div>
           <h3>{artistName}</h3>
           <h4>
-            {primaryGenreName
-              ? `${primaryGenreName} • `
-              : genres
-              ? `${genres[0]} • `
-              : ''}
+            {primaryGenreName ? `${primaryGenreName} • ` : genres ? `${genres[0]} • ` : ''}
             {new Date(releaseDate).getFullYear()}
             {contentAdvisoryRating ? ` • ${contentAdvisoryRating}` : ''}
           </h4>

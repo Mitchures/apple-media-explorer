@@ -33,3 +33,11 @@
     color: white;
   }
 }
+
+@media screen and (max-width: 960px) {
+
+  .search {
+    width: 100%;
+  }
+
+}

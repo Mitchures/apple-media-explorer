@@ -30,7 +30,7 @@
   /* border-color: var(--apple-pink) !important; */
   color: white !important;
   background-image: linear-gradient(to right, var(--apple-pink) 0%, var(--apple-alt-pink) 100%) !important;
-  box-shadow: 0 0 15px -5px var(--apple-pink);
+  box-shadow: 0 0 20px -5px var(--apple-pink);
 }
 
 @media (prefers-color-scheme: dark) {

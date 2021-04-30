@@ -19,9 +19,7 @@ const Subheader: React.FC = () => {
       {data && (
         <div className="subheader__actions">
           <Button
-            className={`subheader__button${
-              activeGenre === 'All' ? '--active' : ''
-            }`}
+            className={`subheader__button${activeGenre === 'All' ? '--active' : ''}`}
             variant="outlined"
             onClick={() => setActiveGenre('All')}
           >
@@ -30,9 +28,7 @@ const Subheader: React.FC = () => {
           {genres?.map((genre, index) => (
             <Button
               key={index}
-              className={`subheader__button${
-                activeGenre === genre ? '--active' : ''
-              }`}
+              className={`subheader__button${activeGenre === genre ? '--active' : ''}`}
               variant="outlined"
               onClick={() => setActiveGenre(genre)}
             >
